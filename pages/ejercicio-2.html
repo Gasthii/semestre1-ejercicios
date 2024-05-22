@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tareas Pendientes</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <i class="fas fa-tasks"></i>
+        <span>Lista de Tareas Pendientes</span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Gestiona tus tareas</h1>
+      <form id="taskForm">
+        <div class="form-group">
+          <label for="task">Nueva Tarea:</label>
+          <input type="text" id="task" name="task" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn">Agregar Tarea</button>
+        </div>
+      </form>
+      <ul id="taskList"></ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Estudiante fernando.torres@estudiantes.utec.edu.uy</p>
+  </footer>
+
+  <script>
+    document.getElementById('taskForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      addTask();
+    });
+
+    function addTask() {
+      const taskInput = document.getElementById('task');
+      const taskText = taskInput.value.trim();
+      
+      if (taskText !== '') {
+        const taskList = document.getElementById('taskList');
+        
+        const li = document.createElement('li');
+        li.textContent = taskText;
+        
+        const deleteBtn = document.createElement('button');
+        deleteBtn.textContent = '❌';
+        deleteBtn.classList.add('delete-btn');
+        deleteBtn.onclick = function() {
+          taskList.removeChild(li);
+        };
+        
+        li.appendChild(deleteBtn);
+        taskList.appendChild(li);
+        taskInput.value = '';
+        taskInput.focus();
+      }
+    }
+  </script>
+</body>
+</html>

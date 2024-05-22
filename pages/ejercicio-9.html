@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarjetas de Producto</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <i class="fas fa-shopping-cart"></i>
+        <span>Tarjetas de Producto</span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://media.discordapp.net/attachments/892513044788314155/1242921431436627988/que-es-html.png?ex=664f9849&is=664e46c9&hm=10a81f358fe1ce846efac9f10dfce137dac00b1f0f63f44bbd5807602fc7f69d&=&format=webp&quality=lossless" alt="Web Hecha a Medida" class="product-image">
+        <div class="product-info">
+          <h3>Web Hecha a Medida</h3>
+          <i class="fab fa-html5"></i>
+          <p>$299.99</p>
+          <button class="buy-button" onclick="buyProduct(this)">Comprar</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://media.discordapp.net/attachments/892513044788314155/1242921516992037026/java-developer-draftdesignweb.png?ex=664f985e&is=664e46de&hm=379281dc3491173d7388ee94fb080835086037b5bddd0a73f958c96fa715232f&=&format=webp&quality=lossless&width=525&height=350" alt="Programa hecho a medida en Java" class="product-image">
+        <div class="product-info">
+          <h3>Programa hecho a medida en Java</h3>
+          <i class="fab fa-java"></i>
+          <p>$399.99</p>
+          <button class="buy-button" onclick="buyProduct(this)">Comprar</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://media.discordapp.net/attachments/892513044788314155/1242921592661475419/curso-gratis-cpp.png?ex=664f9870&is=664e46f0&hm=e9545ccc37c0da07025468003ad5bfb815f72d4824cbf52e56b8119cb2aa28da&=&format=webp&quality=lossless&width=550&height=309" alt="Programa hecho a medida en C++" class="product-image">
+        <div class="product-info">
+          <h3>Programa hecho a medida en C++</h3>
+          <i class="fab fa-cuttlefish"></i>
+          <p>$499.99</p>
+          <button class="buy-button" onclick="buyProduct(this)">Comprar</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://media.discordapp.net/attachments/892513044788314155/1242921642108256299/que-es-kotlin-scaled-1200x675.png?ex=664f987b&is=664e46fb&hm=221274ac2d27d2b523b2bc2b3f2768b26355e17d457e14bbe308045917f28f83&=&format=webp&quality=lossless&width=550&height=309" alt="Aplicación Android hecho a medida en Kotlin" class="product-image">
+        <div class="product-info">
+          <h3>Aplicación Android hecho a medida en Kotlin</h3>
+          <i class="fab fa-android"></i>
+          <p>$599.99</p>
+          <button class="buy-button" onclick="buyProduct(this)">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Estudiante fernando.torres@estudiantes.utec.edu.uy</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
