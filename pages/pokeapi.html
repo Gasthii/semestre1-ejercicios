@@ -9,6 +9,7 @@
             font-family: Arial, sans-serif;
             background-color: #f0f8ff;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -21,6 +22,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             max-width: 400px;
+            margin-bottom: 20px;
         }
         h1 {
             color: #ff6347;
@@ -35,6 +37,11 @@
         .error {
             color: red;
             margin-top: 20px;
+        }
+        footer {
+            text-align: center;
+            font-size: 14px;
+            color: #888;
         }
     </style>
 </head>
@@ -64,12 +71,14 @@
                         <p><strong>Altura:</strong> ${data.height / 10} m</p>
                         <p><strong>Peso:</strong> ${data.weight / 10} kg</p>
                         <img src="${data.sprites.front_default}" alt="${data.name}">
+
+                        <p><strong>estudiante fernando.torres@estudiantes.utec.edu.uy </strong></p>
                     `
                     errorContainer.innerHTML = '' 
                 } catch (error) {
                     console.error('Error de red o en la API:', error) 
                     errorContainer.innerHTML = `Error: ${error.message}`
-                    resultContainer.innerHTML = ''
+                    resultContainer.innerHTML = '' 
                 }
             }
 
