@@ -55,6 +55,10 @@ app.get('/ejercicio-8', (req, res) => {
     res.sendFile(path.join(__dirname, 'pages', 'ejercicio-10.html'));
   });
 
+  app.get('/pokeapi', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'pokeapi.html'));
+  });
+
 
 
 app.use((req, res) => {
